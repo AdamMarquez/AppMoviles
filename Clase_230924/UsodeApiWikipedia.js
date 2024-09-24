@@ -33,5 +33,6 @@ if (resultados.length > 0) {
     } 
     } 
     console.error ('Error:', error); 
-    // Llamar a la función para hacer la búsqueda cuando la página se carga buscarEnWikipedia (); 
+    // Llamar a la función para hacer la búsqueda cuando la página se carga 
+    buscarEnWikipedia (); 
     
