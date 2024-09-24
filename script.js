@@ -41,4 +41,8 @@ let suma = a+b;//7
 let resta = a-b;//3
 let multiplicacion = a*b;//10
 let division = a/b;//2.5
+/*
+    git config --global user.email "marquez.rodriguez.adam.jared@.com"
+    git config --global user.name "ADAM"
+*/
 //git add . / git commit -m "18/09/2024 MARQUEZ RODRIGUEZ ADAM JARED 5IV9" /git push origin main
