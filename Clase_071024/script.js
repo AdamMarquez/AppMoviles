@@ -1,24 +1,44 @@
+/*ESTA FUNCION TIENE EL PROPSITO DE CAPTURAR LA ENTRADA DE DATOS
+PARA SU RESPECTIVA OPERACION*/
 function appendToDisplay(value) {
+
+    /*MANDA A LLAMAR EL ID DEL INPUT PARA MOSTRARLO EN DICHO ELEMENTO*/
     document.getElementById('display').value += value;
 }
 
-
+/*ESTA FUNCIÓN TIENE EL PROPOSITO DE LIMPIAR EL CAMPO DE TEXTO
+DEL INPUT, DONDE SE MUESTRA LA OPERACION Y LOS NUMEROS*/
 function clearDisplay() { 
+
+    /*MANDA A LLAMAR EL ID DEL INPUT PARA MOSTRARLO EN DICHO ELEMENTO*/
     document.getElementById('display').value = '';
 }
 
-
+/*ESTA FUNCIÓN TIENE EL PROPOSITO DE BORRAR LA ULTIMA ENTRADA DE DATOS DEL
+DISPLAY PARA EL RESULTADO*/
 function deletelast() { 
+
+    /*VA RECORRIENDO CONFORME LA ENTRADA DE DATOS*/
     let displayValue = document.getElementById('display').value; 
+
+    /*CUENTA DESDE EL CERO HASTA EL MENOS 1, ES DECIR, DE IZQUIERDA A DERECHA*/
     document.getElementById('display').value = displayValue.slice(0, -1);
 }
 
-
+/*ESTA FUNCIÓN TIENE EL PROPOSITO DE OBTENER EL RESULTADO Y MOSTRARLO
+EN EL INPUT, PERO DE SER CARACTERES, ORDEN O UNA OPERACION INVALIDA,
+O NO CORRECTA, MOSTRARA UN TEXTO FLOTANTE DE EXPRESION INVALIDA*/
 function calculateResult(){  
      try  {
+
+        /*MUESTRA EN EL INPUT EL RESULTADO*/ 
         let result = eval(document.getElementById('display').value); 
+        /*MANDA A LLAMAR EL ID DEL INPUT PARA MOSTRARLO EN DICHO ELEMENTO*/
         document.getElementById('display').value = result; 
     }catch (error) { 
+        /*SI LA OPERACION NO CUMPLE LOS REQUISITOS QUE SON 
+        DE SER CARACTERES, ORDEN O SI ES UNA OPERACION INVALIDA, 
+        O NO CORRECTA, MOSTRARA UN TEXTO FLOTANTE DE EXPRESION INVALIDA*/
         alert('Expresión inválida');
     }
 }
